@@ -4,43 +4,69 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web</title>
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="estilo.css">
 </head>
 <body>
-    <h1>Introduce los datos del vehículo</h1>
-    <form action="nuevoCoche" method="get">
-        <div>
-            <label for="matricula">Matricula:</label>
-            <input type="text" name="matricula" id="matricula">
-        </div>
-        <div>
-            <label for="marca">Marca:</label>
-            <input type="text" name="marca" id="marca">
-        </div>
-        <div>
-            <label for="modelo">Modelo:</label>
-            <input type="text" name="modelo" id="modelo">
-        </div>
-        <div>
-            <label for="potencia">Potencia(cv):</label>
-            <input type="number" name="potencia" id="potencia" value="100" min="50" max="500" step="5">
-        </div>
-        <div>
-            <label for="tipo">Tipo:</label>
-            
- 			<input type="radio" name="tipo" id="gasoil" value="gasoil" checked >
-            <label for="gasoil">Gasoil</label>
-           
-			<input type="radio" name="tipo" id="gasolina" value="gasolina">
-            <label for="gasolina">Gasolina</label>
-            
-            <input type="radio" name="tipo" id="electrico" value="electrico">
-            <label for="electrico">Eléctrico</label>
+    <header>
+        <h1>UF2405-Modelo de programación web y bases de datos </h1>
+    </header>
 
-        </div>
-        <div>
-            <input type="submit" value="Aceptar">
-        </div>
-    </form>
+    <main>
+        <h2>Datos personales del empleado </h2>
+        <form action="datosEmpleados" method="get">
+            <div>
+                <label for="Nombre">Nombre:</label>
+                <input type="text" name="nombre" id="nombre">
+            </div>
+
+            <div>
+                <label for="apellidos">Apellidos:</label>
+                <input type="text" name="apellidos" id="apellidos">
+            </div>
+
+            <div>
+                <label for="provincia">Provincia: </label>
+                <select name="provincia" id="provincia">
+                    <option value="4">Almería</option>
+                    <option value="11">Cádiz</option>
+                    <option value="14" selected>Córdoba</option>
+                    <option value="18">Granada</option>
+                    <option value="21">Huelva</option>
+                    <option value="23">Jaen</option>
+                    <option value="29">Málaga</option>
+                    <option value="41">Sevilla</option>
+                </select>
+            </div>
+            <div>
+                <label for="">Conocimientos:</label>
+            </div>
+            <div>
+                <label for="java">Java</label>
+                <input type="checkbox" name="conocimientos[]" id="java" value="java">
+                <label for="sql">SQL</label>
+                <input type="checkbox" name="conocimientos[]" id="sql" value="sql">
+                <label for="html">HTML</label>
+                <input type="checkbox" name="conocimientos[]" id="html" value="html">
+                <label for="css">CSS</label>
+                <input type="checkbox" name="conocimientos[]" id="css" value="css">
+            </div>
+
+            <div>
+                <label for="fechanac">Fecha Nacimiento:</label>
+                <input type="date" name="fechanac" id="fechanac">
+            </div>
+
+            <div>
+                <label for="experiencia">Experiencia (años):</label>
+                <input type="number" name="experiencia" id="experiencia" 
+                    value="0" min="0" max="50">
+            </div>
+            <input type="submit" value="Enviar">
+        </form>
+        </main>
+        <footer>
+            <h4>UF2405-Modelo de programación web y bases de datos</h4>
+        </footer>
 </body>
 </html>
